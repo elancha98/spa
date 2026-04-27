@@ -1,9 +1,9 @@
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 const routes = {
-    "/": { title: "Home", render: 'home.html' },
-    "/about": { title: "About", render: 'about.html' },
-    "/contact": { title: "Contact", render: 'contact.html' },
+    "/": { title: "Home", render: '/spa/home.html' },
+    "/about": { title: "About", render: '/spa/about.html' },
+    "/contact": { title: "Contact", render: '/spa/contact.html' },
 };
 
 function router() {
