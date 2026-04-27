@@ -1,9 +1,9 @@
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 const routes = {
-    "/": { title: "Home", render: '/spa/home.html' },
-    "/about": { title: "About", render: '/spa/about.html' },
-    "/contact": { title: "Contact", render: '/spa/contact.html' },
+    "/spa": { title: "Home", render: '/spa/home.html' },
+    "/spa/about": { title: "About", render: '/spa/about.html' },
+    "/spa/contact": { title: "Contact", render: '/spa/contact.html' },
 };
 
 function router() {
@@ -17,9 +17,6 @@ function router() {
             .then(r => r.text())
             .then(h => app.innerHTML = h)
             .catch(e => console.error(e));
-    } else {
-        history.replaceState("", "", "/");
-        router();
     }
 };
 
